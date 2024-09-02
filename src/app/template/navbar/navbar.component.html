@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" (click)="onHomeClick()">
+        <img class="logo-4 img-fluid" src="../../../assets/logoCompleto.png" alt="4CSS">
+        <img class="logo-image2 img-fluid" src="../../../assets/logo.png" alt="4CSS">
+      </a>
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" [class.show]="!navbarCollapsed" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link " (click)="onHomeClick()">
+              <i class="bi bi-house-door-fill"></i> 
+              <span class="text-blue-900">Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue-900" (click)="onAboutClick()">
+              <i class="bi bi-info-circle-fill"></i> Sobre
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue-900" (click)="onPortfolioClick()">
+              <i class="bi bi-folder-symlink-fill"></i> Produtos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue-900" (click)="onServicesClick()">
+              <i class="bi bi-gear-fill"></i> Serviços
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-blue-900" (click)="onContactClick()">
+              <i class="bi bi-envelope-fill"></i> Contatos
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

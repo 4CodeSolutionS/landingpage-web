@@ -1,0 +1,13 @@
+.fira-code-bold {
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+  }
+  
+  .container{
+    width: 100%;
+  }
+  
+  ::ng-deep .btn-primary{
+    background-color: #2976e9;
+    border-color: #0d6efd;
+  }

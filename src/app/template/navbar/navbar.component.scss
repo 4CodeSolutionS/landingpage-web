@@ -1,0 +1,47 @@
+/* navbar.component.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  margin-left: 10px;
+}
+.logo-image2{
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-4  {
+  height: 28px;
+  margin-left: 12px;
+  position: absolute;
+  animation: rotate-on-load 3s linear 1;
+}
+
+@keyframes rotate-on-load {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
