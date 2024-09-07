@@ -15,9 +15,10 @@ export class NavbarComponent {
   @Output() servicesClick = new EventEmitter();
   @Output() portfolioClick = new EventEmitter();
 
-  public logo4 = 'assets/img/logo.png';
-  public logoImage2 = 'assets/img/logoCompleto.png';
-  public navbarCollapsed = true;
+  logo4 = 'assets/img/logo.png';
+  logoImage2 = 'assets/img/logoCompleto.png';
+  
+  mobileMenuOpen = false;
 
   private router = inject(Router);
 
@@ -47,6 +48,7 @@ export class NavbarComponent {
   }
 
   toggleNavbar(): void {
-    this.navbarCollapsed = !this.navbarCollapsed;
+    this.mobileMenuOpen = !this.mobileMenuOpen;
   }
+
 }

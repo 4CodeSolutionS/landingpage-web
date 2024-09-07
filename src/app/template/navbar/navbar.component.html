@@ -1,42 +1,104 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" (click)="onHomeClick()">
-        <img class="logo-4 img-fluid" src="/logo.png" alt="4CSS">
-        <img class="logo-completo img-fluid" src="/logoCompleto.png" alt="4CSS">
+<nav class="navbar navbar-expand-lg bg-dark bg-black">
+  <div class="container mx-auto flex items-center py-4 w-full">
+    <div class="flex justify-between items-center w-full">
+      <a class="flex justify-start navbar-brand items-center cursor-pointer" (click)="onHomeClick()">
+        <img class="logo-4 h-7 w-auto mr-2" src="/logo.png" alt="4CSS">
+        <img class="logo-completo h-10 w-auto" src="/logoCompleto.png" alt="4CSS">
       </a>
-      <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" [class.show]="!navbarCollapsed" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link " (click)="onHomeClick()">
-              <i class="bi bi-house-door-fill"></i> 
-              <span class="text-blue-900">Home</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-blue-900" (click)="onAboutClick()">
-              <i class="bi bi-info-circle-fill"></i> Sobre
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-blue-900" (click)="onPortfolioClick()">
-              <i class="bi bi-folder-symlink-fill"></i> Produtos
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-blue-900" (click)="onServicesClick()">
-              <i class="bi bi-gear-fill"></i> Serviços
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-blue-900" (click)="onContactClick()">
-              <i class="bi bi-envelope-fill"></i> Contatos
-            </a>
-          </li>
-        </ul>
-      </div>
+
+      <!-- botão hamburguer -->
+      <span class="flex justify-end md:hidden cursor-pointer nav-link items-center space-x-2 text-white"
+        (click)="toggleNavbar()" [class.open]="mobileMenuOpen">
+        <div class="menu-icon-wrapper">
+          <!-- Barra superior -->
+          <svg class="menu-icon bar-icon bar-icon-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16"></path>
+          </svg>
+
+          <!-- Barra inferior -->
+          <svg class="menu-icon bar-icon bar-icon-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12h16"></path>
+          </svg>
+        </div>
+      </span>
     </div>
-  </nav>
-  
+
+    <!-- Menu para telas maiores (lg e acima) -->
+    <div class="hidden md:flex items-center" ngClass="{ 'hidden': navbarCollapsed }">
+      <!-- Menu Hambúrguer - Apenas para telas menores -->
+      <ul class="flex items-center space-x-6 text-white">
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link flex items-center space-x-2" (click)="onHomeClick()">
+            <i class="fa fa-home mr-2"></i>
+            Home
+          </a>
+        </li>
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link flex items-center space-x-2" (click)="onAboutClick()">
+            <i class="fa fa-info-circle mr-2"></i>
+            Sobre
+          </a>
+        </li>
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link flex items-center space-x-2" (click)="onPortfolioClick()">
+            <i class="fa fa-image mr-2"></i>
+            Produtos
+          </a>
+        </li>
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link flex items-center space-x-2" (click)="onServicesClick()">
+            <i class="fa fa-cogs mr-2"></i>
+            Serviços
+          </a>
+        </li>
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link flex items-center space-x-2" (click)="onContactClick()">
+            <i class="fa fa-envelope mr-2"></i>
+            Contatos
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  @if (mobileMenuOpen) {
+    <div class="flex md:hidden text-white justify-center items-center w-full text-center mt-2 bg-black border-t border-gray-700">
+      <!-- Menu para telas menores -->
+      <ul class="flex flex-col justify-center items-center space-y-4 text-white">
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link flex items-center space-x-6" (click)="onHomeClick()" aria-label="Home">
+            <i class="fa fa-home text-lg"></i>
+            <span class="text-base">Home</span>
+          </a>
+        </li>
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link flex items-center space-x-6" (click)="onAboutClick()" aria-label="Sobre">
+            <i class="fa fa-info-circle text-lg"></i>
+            <span class="text-base">Sobre</span>
+          </a>
+        </li>
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link flex items-center space-x-4" (click)="onPortfolioClick()" aria-label="Produtos">
+            <i class="fa fa-image text-lg"></i>
+            <span class="text-base">Produtos</span>
+          </a>
+        </li>
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link flex items-center space-x-4" (click)="onServicesClick()" aria-label="Serviços">
+            <i class="fa fa-cogs text-lg"></i>
+            <span class="text-base">Serviços</span>
+          </a>
+        </li>
+        <li class="nav-item cursor-pointer">
+          <a class="nav-link flex items-center space-x-4" (click)="onContactClick()" aria-label="Contatos">
+            <i class="fa fa-envelope text-lg"></i>
+            <span class="text-base">Contatos</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+  }
+</nav>

@@ -15,6 +15,10 @@
 
 .nav-item {
   cursor: pointer;
+  :hover {
+    opacity: 0.8;;
+    transition: all 0.7s ease;
+  }
 }
 
 .navbar-nav {
@@ -24,6 +28,9 @@
 .nav-link {
   margin-left: 10px;
 }
+
+// logo
+
 .logo-completo{
   height: 40px;
   margin-right: 10px;
@@ -47,4 +54,44 @@
   to {
     transform: rotateY(360deg);
   }
+}
+
+//animação menu hamburguer
+/* Configuração geral do contêiner dos ícones */
+.menu-icon-wrapper {
+  position: relative;
+  width: 24px; /* Ajuste o tamanho conforme necessário */
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Configuração geral dos ícones */
+.menu-icon {
+  position: absolute;
+  width: 24px; /* Ajuste o tamanho conforme necessário */
+  height: 24px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Barra superior */
+.bar-icon-top {
+  top: 1px; /* Ajuste a posição vertical inicial da barra superior */
+  transform-origin: center;
+}
+
+/* Barra inferior */
+.bar-icon-bottom {
+  top: 5px; /* Ajuste a posição vertical inicial da barra inferior */
+  transform-origin: center;
+}
+
+/* Estilos e animação quando o menu está aberto */
+.open .bar-icon-top {
+  transform: rotate(45deg) translateY(8.5px); /* Roda e move a barra superior para formar um "X" */
+}
+
+.open .bar-icon-bottom {
+  transform: rotate(-45deg) translateY(-3px); /* Roda e move a barra inferior para formar um "X" */
 }
