@@ -1,0 +1,86 @@
+<section class="bg-gray-100 py-8">
+    <div class="container mx-auto px-4 my-4">
+      <div class="text-center mb-4">
+        <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-500 rounded-full mb-2">
+          <i class="fa fa-envelope text-white text-lg"></i>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-800">Entrar em contato</h2>
+        <p class="text-gray-600">Adoraríamos ouvir de você</p>
+      </div>
+      <div class="flex justify-center">
+        <div class="w-full max-w-lg">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <!-- Nome Completo -->
+            <div class="mb-4">
+              <label for="name" class="block text-sm font-medium text-gray-700">Nome Completo</label>
+              <input
+                id="name"
+                type="text"
+                class="mt-1 p-3 block w-full border-transparent focus:ring-blue-500 focus:ring-2 focus:outline-none sm:text-sm"
+                placeholder="Seu nome completo"
+                formControlName="name"
+              />
+            </div>
+  
+            <!-- Email -->
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-700">Endereço de Email</label>
+              <input
+                id="email"
+                type="email"
+                class="mt-1 p-3 block w-full border-transparent focus:ring-blue-500 focus:ring-2 focus:outline-none sm:text-sm"
+                placeholder="seuemail@example.com"
+                formControlName="email"
+              />
+            </div>
+  
+            <!-- Telefone (com máscara) -->
+            <div class="mb-4">
+              <label for="phone" class="block text-sm font-medium text-gray-700">Número de Telefone</label>
+              <input
+                id="phone"
+                appPhoneMask
+                type="tel"
+                class="mt-1 p-3 block w-full border-transparent focus:ring-blue-500 focus:ring-2 focus:outline-none sm:text-sm"
+                placeholder="(xx) xxxx-xxxx"
+                formControlName="phone"
+              />
+            </div>
+  
+            <!-- Mensagem -->
+            <div class="mb-4">
+              <label for="message" class="block text-sm font-medium text-gray-700">Mensagem</label>
+              <textarea
+                id="message"
+                rows="4"
+                class="mt-1 p-3 block w-full border-transparent focus:ring-blue-500 focus:ring-2 focus:outline-none sm:text-sm"
+                placeholder="Digite sua mensagem"
+                formControlName="message"
+              ></textarea>
+            </div>
+  
+            <!-- Sucesso e Erro -->
+            <div class="hidden" id="submitSuccessMessage">
+              <div class="text-center text-green-600 font-semibold mb-2">Formulário enviado com sucesso!</div>
+            </div>
+            <div class="hidden" id="submitErrorMessage">
+              <div class="text-center text-red-600 font-semibold mb-2">Erro ao enviar a mensagem!</div>
+            </div>
+  
+            <!-- Botão de Envio -->
+            <div class="flex justify-center">
+              <button
+                class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                id="submitButton"
+                type="submit"
+                [disabled]="!contactForm.valid"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  

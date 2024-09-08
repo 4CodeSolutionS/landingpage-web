@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './template/navbar/navbar.component';
 import { HomeComponent } from './views/home/home.component';
+import { ContactComponent } from './sections/contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import { HomeComponent } from './views/home/home.component';
     RouterOutlet,
     NavbarComponent,
     HomeComponent,
+    ContactComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
