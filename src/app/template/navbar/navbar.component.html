@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-dark bg-black">
+<nav class="navbar navbar-expand-lg bg-dark bg-black opacity-90">
   <div class="container mx-auto flex items-center py-4 w-full">
     <div class="flex justify-between items-center w-full">
       <a class="flex justify-start navbar-brand items-center cursor-pointer" (click)="onHomeClick()">
@@ -25,9 +25,8 @@
       </span>
     </div>
 
-    <!-- Menu para telas maiores (lg e acima) -->
+    <!-- Menu para telas maiores -->
     <div class="hidden md:flex items-center" ngClass="{ 'hidden': navbarCollapsed }">
-      <!-- Menu Hambúrguer - Apenas para telas menores -->
       <ul class="flex items-center space-x-6 text-white">
         <li class="nav-item cursor-pointer">
           <a class="nav-link flex items-center space-x-2" (click)="onHomeClick()">
@@ -63,9 +62,9 @@
     </div>
   </div>
 
+  <!-- Menu para telas menores -->
   @if (mobileMenuOpen) {
     <div class="flex md:hidden text-white justify-center items-center w-full text-center mt-2 bg-black border-t border-gray-700">
-      <!-- Menu para telas menores -->
       <ul class="flex flex-col justify-center items-center space-y-4 text-white">
         <li class="nav-item cursor-pointer">
           <a class="nav-link flex items-center space-x-6" (click)="onHomeClick()" aria-label="Home">
