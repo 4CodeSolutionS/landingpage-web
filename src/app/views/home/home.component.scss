@@ -7,3 +7,34 @@
     background-color: #2976e9;
     border-color: #0d6efd;
   }
+
+  
+  //animação typing
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 16.5ch; } /* 14ch representa o número exato de caracteres no texto */
+  }
+  
+  @keyframes blinkCursor {
+    50% { border-color: transparent; }
+  }
+  
+  .typing {
+    overflow: hidden; /* Esconde o texto fora da área visível */
+    white-space: nowrap; /* Impede quebras de linha */
+    border-right: 2px solid white; /* Cria o cursor de digitação */
+    display: inline-block; /* Garante que o cursor fique na mesma linha do texto */
+    color: white; /* Cor do texto */
+    
+    /* Ajustes de animação */
+    animation: typing 4s steps(14, end) 1s forwards, blinkCursor 0.75s step-end infinite;
+    width: 0; /* Começa com largura zero */
+  }
+  
+  /* Após a digitação, mantém o cursor piscando */
+  .reanimate {
+    border-right: 2px solid white; /* Mantém o cursor piscando */
+    animation: blinkCursor 0.75s step-end infinite; /* Pisca após a digitação */
+    width: 16.5ch; /* Fixa a largura ao número exato de caracteres */
+  }
+  

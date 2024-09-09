@@ -10,4 +10,25 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  //animação digitação
+  ngAfterViewInit() {
+    this.startTypingAnimation();
+  }
+
+  startTypingAnimation() {
+    const typingText = document.getElementById('typingText');
+    
+    if (typingText) {
+      typingText.classList.remove('reanimate');  // Inicia a animação de digitação
+
+      setTimeout(() => {
+        // Após 4 segundos (tempo de digitação), faz o cursor piscar por 1 minuto
+        typingText.classList.add('reanimate');   // Mantém o texto e o cursor piscando
+        setTimeout(() => {
+          typingText.classList.remove('reanimate'); // Reinicia a animação de digitação após 1 minuto
+          this.startTypingAnimation();
+        }, 60000); // 60000ms = 1 minuto
+      }, 5000); // Tempo total da animação (4s + 1s de delay para o cursor)
+    }
+  }
 }

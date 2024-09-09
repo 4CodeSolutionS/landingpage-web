@@ -1,44 +1,101 @@
-<header class="bg-dark py-5 mb-4">
-
+<header class="relative bg-dark py-5 mb-4">
   <div class="col-lg-6 flex justify-center">
     <div class="text-center my-5">
-      <div class="flex flex-row justify-center my-5">
-        <img src="/monitor.fw.png" alt="monitor" class="w-[35rem]">
+      <div class="flex flex-row justify-center mt-5 md:mt-0">
+        <img src="/monitor.fw.png" alt="monitor" class="w-[17rem] md:w-[35rem]">
       </div>
-      <h1 class="display-5 fw-bolder text-black mb-4 fira-code-bold">4 Code Solutions</h1>
-      <p class="lead text-white-50 mb-5">Desenvolvimento web, criamos soluções responsivas e personalizadas, adaptáveis
-        a qualquer dispositivo, combinando design inovador e tecnologia.</p>
-      <div class="gap-2 d-sm-flex justify-content-sm-center">
-        <a class="bg-btnColorPrimary text-white px-4 py-2 rounded-lg" href="#features">Vamos começar</a>
-        <a class="bg-secondary text-white px-4 py-2 rounded-lg" href="#services">Saiba Mais</a>
+      <!-- animação digitando texto -->
+      <p class="text-white-50 text-18 text-center md:text-22 my-3">
+        <span class="display-5 fw-bolder my-2 fira-code-bold text-white text-22 typing" id="typingText">4 Code SolutionS</span>
+      </p>
+
+      <p class="lead text-white text-18 text-start md:text-22 px-4">
+        Transforme suas ideias em realidade com soluções web personalizadas e
+        responsivas, criadas para qualquer dispositivo.
+      </p>
+      <p class="lead text-white text-18 md:text-center md:text-22 mb-3 px-4">
+        Conecte seu negócio ao mundo digital com inovação e tecnologia.
+      </p>
+
+      <div class="flex gap-2 justify-center">
+        <a class="bg-btnColorPrimary text-white px-4 py-2 rounded-lg border border-transparent hover:bg-black hover:text-white hover:border-btnColorPrimary transition duration-300 ease-in-out"
+          href="#features">Vamos começar</a>
+        <a class="border border-btnColorPrimary text-white px-4 py-2 rounded-lg hover:bg-btnColorPrimary hover:text-white transition duration-300 ease-in-out"
+          href="#services">Saiba Mais</a>
       </div>
+      
     </div>
   </div>
+
+  <!-- Balão animado com destaque para o SaaS -->
+  <div class="absolute top:0 md:top-[10rem] left-28 animate-bounce  border border-blue-600 bg-btnColorPrimary p-4 rounded-lg shadow-lg">
+    <p class="text-white font-bold">Crie sua loja online em 5 minutos!</p>
+    <a href="#saasSection"
+      class="block bg-white text-black px-4 py-2 mt-2 rounded-lg hover:bg-opacity-90 transition">Saiba Mais</a>
+  </div>
 </header>
-<section class="border-bottom" id="features">
-  <div class="flex justify-center px-5 my-5">
-    <div class="row gx-5 justify-content-center">
-      <div class="col-lg-4 mb-5 mb-lg-0">
-        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-code-square"></i></div>
-        <h2 class="h4 fw-bolder">Desenvolvimento Web Personalizado</h2>
-        <p class="text-justify">Estamos equipados para criar soluções web únicas e personalizadas, adaptadas às
-          necessidades específicas de cada cliente. Acreditamos na combinação de design inovador e tecnologia para
-          desenvolver produtos que atendam às demandas atuais.</p>
+
+<!-- Features Section -->
+<section class="border-bottom text-white px-2" id="features">
+  <div class="flex justify-center px-10 my-5">
+    
+    <div class="row justify-content-center">
+      <div class="flex flex-row items-center">
+        <div class="inline-flex items-center justify-center w-14 h-14 bg-btnColorPrimary rounded-full mr-3">
+          <img src="/icones/documento-html.fw.png" class="w-7" alt="html">
+        </div>
+        <h2 class="h4 font-bold text-18 md:text-22">Desenvolvimento Web Personalizado</h2>
       </div>
-      <div class="col-lg-4 mb-5 mb-lg-0">
-        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-display"></i></div>
-        <h2 class="h4 fw-bolder">Soluções Responsivas</h2>
-        <p class="text-justify">Criamos websites e aplicativos responsivos que são otimizados para qualquer tipo de
-          dispositivo, seja desktop, tablet ou smartphone. Nossa equipe está empenhada em desenvolver soluções
-          acessíveis e fáceis de usar, independentemente da plataforma.</p>
+
+      <div class="col-lg-4 mb-10 mb-lg-0 flex items-start">
+        <div>
+          <p class="text-14 md:text-18 mt-2 ml-7 px-10">
+            Estamos equipados para criar soluções web únicas e personalizadas, adaptadas às necessidades específicas de
+            cada cliente. Acreditamos na combinação de design inovador e tecnologia para desenvolver produtos que
+            atendam
+            às demandas atuais.
+          </p>
+        </div>
       </div>
-      <div class="col-lg-4">
-        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-lightbulb"></i></div>
-        <h2 class="h4 fw-bolder">Inovação e Tecnologia</h2>
-        <p class="text-justify">Nós da 4 CSS acreditamos que o futuro da tecnologia está nas mãos daqueles dispostos a
-          sonhar e a trabalhar para concretizar esses sonhos. Estamos continuamente crescendo, aprendendo e evoluindo,
-          empregando nossas habilidades técnicas e desenvolvendo novas competências.</p>
+
+      <!-- Segundo ícone: Celular -->
+      <div class="flex flex-row items-center">
+          <div class="inline-flex items-center justify-center w-14 h-14 bg-btnColorPrimary rounded-full mr-3">
+            <!-- <img src="/icones/celular.png" class="w-7" alt="celular"> -->
+            <i class="fa fa-mobile text-white text-[2.5rem]" aria-hidden="true"></i>
+          </div>
+          <h2 class="h4 font-bold text-18 md:text-22">Soluções Responsivas</h2>
+      </div>
+      <div class="col-lg-4 mb-10 mb-lg-0 flex items-start">
+        <div>
+          <p class="text-14 md:text-18 mt-2 ml-7 px-10">
+            Criamos websites e aplicativos responsivos que são otimizados para qualquer tipo de dispositivo, seja
+            desktop,
+            tablet ou smartphone. Nossa equipe está empenhada em desenvolver soluções acessíveis e fáceis de usar,
+            independentemente da plataforma.
+          </p>
+        </div>
+      </div>
+
+      <!-- Terceiro ícone: Lâmpada com riscos (fa-lightbulb-on) -->
+      <div class="flex flex-row items-center">
+        <div class="inline-flex items-center justify-center w-14 h-14 bg-btnColorPrimary rounded-full mr-3">
+          <img src="/icones/lightbulb.fw.png" class="w-7" alt="Lâmpada">
+        </div>
+        <h2 class="h4 font-bold text-18 md:text-22">Inovação e Tecnologia</h2>
+      </div>
+      <div class="col-lg-4 flex items-start">
+        <div>
+          <p class="text-14 md:text-18 ml-7 px-10">
+            Nós da 4 CSS acreditamos que o futuro da tecnologia está nas mãos daqueles dispostos a sonhar e a trabalhar
+            para
+            concretizar esses sonhos. Estamos continuamente crescendo, aprendendo e evoluindo, empregando nossas
+            habilidades
+            técnicas e desenvolvendo novas competências.
+          </p>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
