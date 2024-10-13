@@ -13,7 +13,7 @@ export class NavbarComponent {
   @Output() homeClick = new EventEmitter();
   @Output() aboutClick = new EventEmitter();
   @Output() servicesClick = new EventEmitter();
-  @Output() portfolioClick = new EventEmitter();
+  @Output() productsClick = new EventEmitter();
 
   logo4 = 'assets/img/logo.png';
   logoImage2 = 'assets/img/logoCompleto.png';
@@ -42,9 +42,9 @@ export class NavbarComponent {
     this.servicesClick.emit();
   }
 
-  onPortfolioClick(): void {
-    console.log('Portfolio clicked');
-    this.portfolioClick.emit();
+  onProductsClick(): void {
+    console.log('Products clicked');
+    this.productsClick.emit();
   }
 
   toggleNavbar(): void {
