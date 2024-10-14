@@ -23,6 +23,7 @@
     overflow: hidden; /* Esconde o texto fora da área visível */
     white-space: nowrap; /* Impede quebras de linha */
     border-right: 2px solid white; /* Cria o cursor de digitação */
+    height: 1.5rem; /* Altura do cursor */
     display: inline-block; /* Garante que o cursor fique na mesma linha do texto */
     color: white; /* Cor do texto */
     
