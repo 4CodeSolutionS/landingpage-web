@@ -5,6 +5,7 @@ import { HomeComponent } from './views/home/home.component';
 import { ContactComponent } from './sections/contact/contact.component';
 import { ProductsComponent } from './sections/products/products.component';
 import { ServicesWorkComponent } from './sections/services-work/services-work.component';
+import { AboutComponent } from './sections/about/about.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { ServicesWorkComponent } from './sections/services-work/services-work.co
     ContactComponent,
     ProductsComponent,
     ServicesWorkComponent,
+    AboutComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
