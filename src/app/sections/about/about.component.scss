@@ -25,7 +25,7 @@
   color: #333;
   line-height: 1.5;
   text-align: justify;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .aspas {
@@ -37,8 +37,14 @@
   text-align: right;
 }
 .social-icon {
-  font-size: 50px; 
+  font-size: 50px;
 }
 .social-icon:hover {
   color: red;
+}
+
+@media (min-width: 768px) {
+  .quem-somos-texto {
+    padding: 6rem;
+  }
 }
