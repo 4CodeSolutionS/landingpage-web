@@ -12,8 +12,14 @@
 }
 
 .social-icon {
-  font-size: 50px; 
+  font-size: 50px;
 }
 .social-icon:hover {
   color: red;
+}
+
+@media (min-width: 768px) {
+  .quem-somos-texto {
+    padding: 6rem;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  @Output() servicesClick = new EventEmitter();
 
   //animação digitação
   ngAfterViewInit() {
@@ -17,7 +18,7 @@ export class HomeComponent {
 
   startTypingAnimation() {
     const typingText = document.getElementById('typingText');
-    
+
     if (typingText) {
       typingText.classList.remove('reanimate');  // Inicia a animação de digitação
 
@@ -31,4 +32,10 @@ export class HomeComponent {
       }, 5000); // Tempo total da animação (4s + 1s de delay para o cursor)
     }
   }
+
+  onServicesClick(): void {
+    console.log('Services clicked');
+    this.servicesClick.emit();
+  }
+
 }

@@ -6,6 +6,7 @@ import { ContactComponent } from './sections/contact/contact.component';
 import { ProductsComponent } from './sections/products/products.component';
 import { ServicesWorkComponent } from './sections/services-work/services-work.component';
 import { AboutComponent } from './sections/about/about.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { AboutComponent } from './sections/about/about.component';
     ProductsComponent,
     ServicesWorkComponent,
     AboutComponent,
+    HttpClientModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
