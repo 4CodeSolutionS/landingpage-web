@@ -1,18 +1,18 @@
-<section class="bg-gray-100 py-8">
+<section class="bg-gray-100 dark:bg-black py-8">
     <div class="container mx-auto px-4 my-4">
       <div class="text-center mb-4">
         <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-500 rounded-full mb-2">
           <i class="fa fa-envelope text-white text-lg"></i>
         </div>
-        <h2 class="text-2xl font-bold text-gray-800">Entrar em contato</h2>
-        <p class="text-gray-600">Adoraríamos ouvir de você</p>
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white">Entrar em contato</h2>
+        <p class="text-gray-600 dark:text-white">Adoraríamos ouvir de você</p>
       </div>
       <div class="flex justify-center">
         <div class="w-full max-w-lg">
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <!-- Nome Completo -->
             <div class="mb-4">
-              <label for="name" class="block text-sm font-medium text-gray-700">Nome Completo</label>
+              <label for="name" class="block text-sm font-medium text-gray-700 dark:text-white">Nome Completo</label>
               <input
                 id="name"
                 type="text"
@@ -24,7 +24,7 @@
 
             <!-- Email -->
             <div class="mb-4">
-              <label for="email" class="block text-sm font-medium text-gray-700">Endereço de Email</label>
+              <label for="email" class="block text-sm font-medium text-gray-700 dark:text-white">Endereço de Email</label>
               <input
                 id="email"
                 type="email"
@@ -36,7 +36,7 @@
 
             <!-- Telefone (com máscara) -->
             <div class="mb-4">
-              <label for="phone" class="block text-sm font-medium text-gray-700">Número de Telefone</label>
+              <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-white">Número de Telefone</label>
               <input
                 id="phone"
                 appPhoneMask
@@ -49,7 +49,7 @@
 
             <!-- Mensagem -->
             <div class="mb-4">
-              <label for="message" class="block text-sm font-medium text-gray-700">Mensagem</label>
+              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-white">Mensagem</label>
               <textarea
                 id="message"
                 rows="4"
