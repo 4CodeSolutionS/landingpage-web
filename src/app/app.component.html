@@ -1,7 +1,9 @@
-<app-navbar (contactClick)="scrollToContact()" (homeClick)="scrollToHome()" (productsClick)="scrollToProducts()"
+<app-navbar 
+    (contactClick)="scrollToContact()" 
+    (homeClick)="scrollToHome()" (productsClick)="scrollToProducts()"
     (aboutClick)="scrollToAbout()" (servicesClick)="scrollToServicesWork()">
 </app-navbar>
-<app-home #homeSection></app-home>
+<app-home #homeSection (servicesClick)="scrollToServicesWork()"></app-home>
 <!-- <app-products #productsSection></app-products>  -->
 <app-about #aboutSection></app-about>
 <app-services-work #servicesWorkSection></app-services-work>

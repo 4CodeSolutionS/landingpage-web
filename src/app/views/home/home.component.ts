@@ -40,8 +40,7 @@ export class HomeComponent {
   }
 
   onServicesClick(): void {
-    console.log('Services clicked');
-    this.servicesClick.emit();
+    this.servicesClick.emit(); 
   }
 
 }
