@@ -10,6 +10,7 @@ import { Component, EventEmitter, inject, Output, Renderer2 } from '@angular/cor
 })
 export class HomeComponent {
   @Output() servicesClick = new EventEmitter();
+  @Output() aboutClick = new EventEmitter<void>(); 
 
   phone = '5511964509974';
 
@@ -39,8 +40,21 @@ export class HomeComponent {
     return null
   }
 
+  onAboutClick(): void {
+    console.log('About clicked');
+    this.scrollDown(200);  
+    this.aboutClick.emit(); 
+  }
+  
+
   onServicesClick(): void {
     this.servicesClick.emit(); 
   }
 
+  scrollDown(offset: number): void {
+    window.scrollBy({
+      top: offset, // Deslocamento vertical
+      behavior: 'smooth' // Efeito suave
+    });
+  }
 }
