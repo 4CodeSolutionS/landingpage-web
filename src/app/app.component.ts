@@ -31,29 +31,26 @@ export class AppComponent implements OnInit {
   @ViewChild('productsSection', { static: true, read: ElementRef }) productsSection!: ElementRef;
   @ViewChild('servicesWorkSection', { static: true, read: ElementRef }) servicesWorkSection!: ElementRef;
 
-  ngOnInit(): void { }
+
+  ngOnInit(): void {
+  }
   scrollToContact(): void {
-    console.log('Scrolling to contact');
     this.contactSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 
   scrollToHome(): void {
-    console.log('Scrolling to home');
     this.homeSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 
   scrollToAbout(): void {
-    console.log('Scrolling to about');
     this.aboutSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 
   scrollToProducts(): void {
-    console.log('Scrolling to products');
     this.productsSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 
   scrollToServicesWork(): void {
-    console.log('Scrolling to services work');
     this.servicesWorkSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 }

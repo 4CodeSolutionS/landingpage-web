@@ -1,12 +1,11 @@
 <app-navbar (contactClick)="scrollToContact()" (homeClick)="scrollToHome()" (productsClick)="scrollToProducts()"
-    (aboutClick)="scrollToAbout()" (servicesClick)="scrollToServicesWork()"></app-navbar>
-<div class="mt-10">
-    <app-home #homeSection></app-home>
-    <!-- <app-products #productsSection></app-products>  -->
-    <app-about #aboutSection></app-about>
-    <app-services-work #servicesWorkSection></app-services-work>
-    <!-- <iframe src="assets/bootstrap/index.html" style="width: 100%; height: 100vh; border: none;"></iframe> -->
-    <!-- <app-clients></app-clients>
+    (aboutClick)="scrollToAbout()" (servicesClick)="scrollToServicesWork()">
+</app-navbar>
+<app-home #homeSection></app-home>
+<!-- <app-products #productsSection></app-products>  -->
+<app-about #aboutSection></app-about>
+<app-services-work #servicesWorkSection></app-services-work>
+<!-- <iframe src="assets/bootstrap/index.html" style="width: 100%; height: 100vh; border: none;"></iframe> -->
+<!-- <app-clients></app-clients>
     <app-footer></app-footer> -->
-    <app-contact #contactSection></app-contact>
-</div>
+<app-contact #contactSection></app-contact>

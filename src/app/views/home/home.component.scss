@@ -39,3 +39,31 @@
     width: 16.5ch; /* Fixa a largura ao número exato de caracteres */
   }
   
+
+  .whatsapp-icon {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1000;
+    background-color: #00B067; 
+    color: #ffffff; 
+    border-radius: 30px; 
+    padding: 10px; 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    width: 217px; 
+    height: 60px; 
+    text-decoration: none;
+  }
+  
+  .whatsapp-icon span {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    flex: 1; 
+  }
+  
+  .whatsapp-icon:hover {
+    background-color: #25D366; 
+  }
