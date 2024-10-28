@@ -58,6 +58,18 @@
             Contatos
           </a>
         </li>
+        <li class="nav-item cursor-pointer">
+          <div class="flex items-center">
+            <button (click)="toggleTheme()" class="relative w-16 h-8 bg-gray-400 dark:bg-gray-600 rounded-full p-1 transition-colors duration-300 ease-in-out focus:outline-none">
+              <span
+                class="absolute left-1 top-1 w-6 h-6 rounded-full bg-white transform transition-transform duration-300 flex items-center justify-center"
+                [ngClass]="{'translate-x-8': isDarkMode}">
+                <img *ngIf="isDarkMode" src="./assets/icones/sun.svg" alt="Sun Icon" class="w-4 h-4">
+                <img *ngIf="!isDarkMode" src="./assets/icones/moon-stars.svg" alt="Moon Icon" class="w-4 h-4">
+              </span>
+            </button>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -66,6 +78,18 @@
   @if (mobileMenuOpen) {
     <div class="flex md:hidden text-white justify-center items-center w-full text-center mt-2 bg-black border-t border-gray-700">
       <ul class="flex flex-col justify-center items-center space-y-4 text-white">
+        <li class="nav-item cursor-pointer mt-2">
+          <div class="flex items-center">
+            <button (click)="toggleTheme()" class="relative w-16 h-8 bg-gray-400 dark:bg-gray-600 rounded-full p-1 transition-colors duration-300 ease-in-out focus:outline-none">
+              <span
+                class="absolute left-1 top-1 w-6 h-6 rounded-full bg-white transform transition-transform duration-300 flex items-center justify-center"
+                [ngClass]="{'translate-x-8': isDarkMode}">
+                <img *ngIf="isDarkMode" src="./assets/icones/sun.svg" alt="Sun Icon" class="w-4 h-4">
+                <img *ngIf="!isDarkMode" src="./assets/icones/moon-stars.svg" alt="Moon Icon" class="w-4 h-4">
+              </span>
+            </button>
+          </div>
+        </li>
         <li class="nav-item cursor-pointer">
           <a class="nav-link flex items-center space-x-6" (click)="onHomeClick()" aria-label="Home">
             <i class="fa fa-home text-lg"></i>
