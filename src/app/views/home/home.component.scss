@@ -20,16 +20,12 @@
   }
   
   .typing {
-    overflow: hidden; /* Esconde o texto fora da área visível */
-    white-space: nowrap; /* Impede quebras de linha */
-    border-right: 2px solid white; /* Cria o cursor de digitação */
-    height: 1.5rem; /* Altura do cursor */
-    display: inline-block; /* Garante que o cursor fique na mesma linha do texto */
-    color: white; /* Cor do texto */
-    
-    /* Ajustes de animação */
+    overflow: hidden;
+    white-space: nowrap;
+    height: 1.5rem;
+    display: inline-block;
     animation: typing 4s steps(14, end) 1s forwards, blinkCursor 0.75s step-end infinite;
-    width: 0; /* Começa com largura zero */
+    width: 0;
   }
   
   /* Após a digitação, mantém o cursor piscando */
