@@ -1,13 +1,13 @@
+import { ThemeService } from '@/app/service/theme.service';
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, inject, Output, Renderer2 } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
   @Output() contactClick = new EventEmitter();
@@ -20,15 +20,15 @@ export class NavbarComponent {
   logoImage2 = 'assets/img/logoCompleto.png';
   
   mobileMenuOpen = false;
-  isDarkMode = false;
   
-  private router = inject(Router);
-  private renderer = inject(Renderer2);
+  private themeService = inject(ThemeService);
 
-  ngOnInit(): void {
-    // Verifica o tema salvo no localStorage e aplica o tema correspondente
-    this.isDarkMode = localStorage.getItem('theme') === 'dark';
-    this.updateTheme();
+  get isDarkMode() {
+    return this.themeService.isDarkMode(); // Observa mudanças no tema
+  }
+
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
   }
 
   onContactClick(): void {
@@ -58,22 +58,6 @@ export class NavbarComponent {
 
   toggleNavbar(): void {
     this.mobileMenuOpen = !this.mobileMenuOpen;
-  }
-
-  //CONFIG DARK THEME
-
-  toggleTheme(): void {
-    this.isDarkMode = !this.isDarkMode;
-    localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
-    this.updateTheme();
-  }
-
-  private updateTheme(): void {
-    if (this.isDarkMode) {
-      this.renderer.addClass(document.documentElement, 'dark');
-    } else {
-      this.renderer.removeClass(document.documentElement, 'dark');
-    }
   }
 
 }

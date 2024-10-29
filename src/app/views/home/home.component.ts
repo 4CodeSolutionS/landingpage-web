@@ -1,3 +1,4 @@
+import { ThemeService } from '@/app/service/theme.service';
 import { Component, EventEmitter, inject, Output, Renderer2 } from '@angular/core';
 
 @Component({
@@ -11,6 +12,8 @@ import { Component, EventEmitter, inject, Output, Renderer2 } from '@angular/cor
 export class HomeComponent {
   @Output() servicesClick = new EventEmitter();
   @Output() aboutClick = new EventEmitter<void>(); 
+
+  private themeService = inject(ThemeService);
 
   phone = '5511964509974';
 
@@ -56,5 +59,11 @@ export class HomeComponent {
       top: offset, // Deslocamento vertical
       behavior: 'smooth' // Efeito suave
     });
+  }
+
+  get imageSource(): string {
+    return this.themeService.isDarkMode()
+      ? './assets/monitor-dark.png'
+      : './assets/monitor.fw.png';
   }
 }
