@@ -7,19 +7,21 @@ import { ProductsComponent } from './sections/products/products.component';
 import { ServicesWorkComponent } from './sections/services-work/services-work.component';
 import { AboutComponent } from './sections/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './template/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
     NavbarComponent,
     HomeComponent,
     ContactComponent,
     ProductsComponent,
     ServicesWorkComponent,
     AboutComponent,
-    HttpClientModule
+    FooterComponent,
+    RouterOutlet,
+    HttpClientModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
